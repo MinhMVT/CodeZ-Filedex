@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Event Example</title>
+</head>
+<body>
+
+
+    <button id="btnButton" >Click me</button>
+    <input type="text" name="message" name="message" >
+    <p id="content"></p>
+    <p id="demo" ></p>
+
+    <script>
+        document.getElementById("btnButton")
+        .addEventListener("click",funcUserDifine);
+        function funcUserDifine(){
+            document.getElementById("content").innerHTML= Date();
+        }
+        let textBox=document.getElementById("message");
+        textBox.addEventListener("keydown",(event) => {
+           // console.log('key': event.key+
+          //              'code': event.code);
+            document.getElementById("demo").innerHTML=
+            event.key+event.code;
+         });
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM in JavaScript</title>
+</head>
+<body>
+    <h3>Javascript getElementBy...(id.name...)</h3>
+    <p>Pls rate the service:</p>
+    <p>
+        <label for="very-poor">
+            <input type="radio" value="very-poor" name="rate" id="very-poor">very poor
+        </label>
+        <label for="poor">
+            <input type="radio" value="poor" name="rate" id="poor">poor
+        </label>
+        <label for="good">
+            <input type="radio" value="good" name="rate" id="good">good
+        </label>
+        <label for="very-good">
+            <input type="radio" value="very-good" name="rate" id="very-good">very-good
+        </label>
+    </p>
+    <p>
+        <button id="btnRate" >Submit</button>
+    </p>
+    <p id="output" ></p>
+    <script>
+        let btn=document.getElementsByName('rate');//đọc dữ liệu
+        let output=document.getElementById('output');//Gắn dữ liệu
+ //       let vrp=document.getElementById(' very-poor');
+ //     let good=document.getElementById(' good');
+//
+   //     if(vrp.checked){
+  //          //very-poor
+ //       }
+//        else if(poor.checked){
+  //          //poor
+  //      }
+   //     else if(good.checked){
+   //         //good
+   //     }
+   //     else if(verygood.checked){
+   //         //verygood
+   //     }
+   //     else{
+   //         //nothing
+    //    }
+//--------------------------------------------------------------------------------------
+//khi có sự kiện xảy ra thì lấy data 
+    //    let rates=document.getElementsByTagName('rate');
+    //    rates.forEach()(rate =>{
+    //        if(rete.checked){
+//
+    //            }
+   //         });
+        
+ //-------------------------------------------------------------------------------------           
+ //gán bộ sự kiện cho btn
+        btn.addEventListener("click",()=>{
+            let rates=document.getElementsByName("rate");
+            rates.forEach((rate)=>{
+                if(rate.checked){
+                    //innerText:ghi noi dung"động" tới thẻ
+                    //${}:dùng để laáy giá trị của biến
+                    output.innerHTML = 'You selected :'+ rate.value;
+                    //console.log(rate.value)
+                }
+            })
+             
+       });           
+
+
+
+    </script>
+</body>
+</html>

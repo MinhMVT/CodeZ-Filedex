@@ -1,0 +1,32 @@
+.parent{
+    display: grid;
+    height: 100%;
+}
+header {
+    padding: 2rem;
+    grid-column: 1/4;
+    background-color: blue;
+}
+.left-side {
+    grid-column: 1/2;
+    background-color: aqua;
+}
+main{
+    grid-column: 2/3;
+    background-color: beige;
+}
+.right-side {
+    grid-column: 3/4;
+    background-color: brown;
+}
+footer{
+    grid-column: 1/4;
+    font-size: 1.5rem;
+    padding: 1rem;
+    background-color: cornflowerblue;
+}
+body{
+    display: grid;
+    place-items: center;
+    border-radius: 1rem;
+}

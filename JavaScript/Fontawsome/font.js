@@ -1,0 +1,1 @@
+<font-awesome-icon :icon="['fasl', 'check']" />
