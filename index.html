@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+</head>
+<body>
+    <a href="https://vietnamnews.vn/">New  VN</a>
+    <p>Click</p>
+    <script>
+        $(document).ready(function(){
+
+        });
+        $(document).ready(function(){
+            $("a").click(function(event){
+                alert("Hello event");
+            })
+        });
+
+        // kết hơpk với css
+        $(document).ready(function(){
+            $("h1").css("color","blue");
+            $(".red").css("color","red");
+            //$("selecter").css("propety","value");
+            $("p").css("background-color","green");
+            $("#data").css("background-color","yelow")
+           
+            //Sự kết hơp với event
+            $("document").ready("function"(){
+//
+                $("div").mouseover(function(){
+                    alert ('Mouse over!!!');
+                });
+            });
+        });
+    </script>
+    <h1 id="Hello" >Hello</h1>
+    <div class="red" >This is div tag</div>
+    <p>This is p tag</p>
+    <div id="data" >Contents on the div tag</div>
+    
+</body>
+</html>
