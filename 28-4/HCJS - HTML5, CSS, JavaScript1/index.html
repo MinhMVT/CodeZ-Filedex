@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Form Validation</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="content">
+            <div class="logo">
+                <img src="images/logo.svg" alt="">
+            </div>
+            <div class="image"></div>
+        
+        </div>
+        <form action="#" id="form" method="post">
+            <div>
+                <div class="social">
+                    <div class="title">Create Account</div>
+                    <div class="question">
+                        Get Started with your free account<br />
+                
+                    </div>
+                    <div class="btn">
+                        <div class="btn-1">
+                            <img src="https://img.icons8.com/color/48/null/twitter--v1.png"/>
+                            Login via Twitter
+                        </div>
+                        <div class="btn-2">
+                            <img src="http://img.icons8.com/ios-filled/30/ffffff/facebook-new.png" />
+                            Login via facebook
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <!--Username Input-->
+            <div>
+                <p style="text-align: center;">Or</p><br>
+                <label for="username"></label>
+                <i class="fas fa-user"></i>
+                <input type="text" name="username" id="username" placeholder="James Bond">
+                <i class="fas fa-exclamation-circle failure-icon"></i>
+                <i class="far fa-check-circle success-icon"></i>
+                <div class="error"></div>
+            </div>
+            <!--Email input-->
+            <div>
+                <label for="email"></label>
+                <i class="far fa-envelope"></i>
+                <input type="text" name="email" id="email" placeholder="abc@gmail.com">
+                <i class="fas fa-exclamation-circle failure-icon"></i>
+                <i class="far fa-check-circle success-icon"></i>
+                <div class="error"></div>
+            </div>
+            <!--Password input-->
+            <div>
+                <label for="email"></label>
+                
+                <input type="text" name="email" id="email" placeholder="84+">
+                
+                
+                <div class="error"></div>
+            </div>
+
+            <div>
+                <label for="email"></label>
+                
+                <input type="text" name="email" id="email" placeholder="Celect job type">
+                
+                
+                <div class="error"></div>
+
+            <div>
+                <label for="email"></label>
+                <i class="fas fa-lock"></i>
+                <input type="text" name="email" id="email" placeholder="Create password">
+                <i class="fas fa fa-exclamation-circle failure-icon"></i>
+                <i class="far fa-check-circle success-icon"></i>                   
+                <div class="error"></div>
+
+            <div>
+                <label for="email"></label>
+                <i class="fas fa-lock"></i>
+                <input type="text" name="email" id="email" placeholder="Repeat password">
+                <i class="fas fa-exclamation-circle failure-icon"></i>
+                <i class="fas fa fa-exclamation-circle failure-icon"></i>
+                <i class="far fa-check-circle success-icon"></i>                   
+                <div class="error"></div>    
+            </div>
+            <button id="btn" type="Create Account">Create Account</button>
+
+            <br><br><p style="text-align: center;">Have an account?
+                <a href="#">Log In</a>
+            </p>
+        </form>
+    </div>
+    
+</body>
+<script src="main.js"></script>
+</html>
