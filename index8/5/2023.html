@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MVC and events</title>
+</head>
+<body>
+    <!---M :Model;C:controller;V:View-->
+    <!---Model:sử lý các nghiệp vụ (functions)
+         Controller:nhận và điều hướng các request tới Model và View
+         View: load(binding) dữ liệu từ Model.
+        (giao tiếp giữa các Controller) và View sử dụng $scope-->
+
+        <script src="ag2-controller.js"></script>
+        <script src="ag2-model.js"></script>
+        <h2>MVC design patter demo</h2>
+        <!--Khai báo Angulerjs và controller-->
+        <div ng-app="myApp" ng-controller="myController" >
+            Vowels:
+            <button ng-click="ch('A')" >A</button>
+            <button ng-click="ch('E')" >E</button>
+            <button ng-click="ch('E')" >I</button>
+            <button ng-click="ch('O')" >O</button>
+            <button ng-click="ch('U')" >U</button>
+            <!--binding data(step 4)-->
+            <p>{{ choice }}
+            </p>
+            list:
+            <select ng-options="option for option in list"
+            ng-model="mychoice" 
+            ng-change="c()"
+
+            ></select>
+            <p>{{ choice }}</p>
+
+        </div>
+
+</body>
+</html>
