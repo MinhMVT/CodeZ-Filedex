@@ -1,0 +1,102 @@
+	h1{
+		margin: -42%;
+		display: inline;
+		
+	}
+	
+	form {
+			border: 3px solid #f1f0f0;
+			padding: 400px;
+			width: 400px;
+			margin: 0 auto;
+			margin-top: 100px;
+	}	
+	button[type=submit]{
+		display: flexbox;
+		width: fit-content;		
+		margin: -20%;
+		border-radius: 5px;
+	}
+	button[type=cancel]{
+		display: flexbox;
+		width: fit-content;	
+		margin: -86px;	
+		border-radius: 5px;
+	}
+	label{
+	position: absolute;
+	display: flexbox;
+	margin: 30px -70px;
+	
+	}	
+	label[for="email"] {
+		position: absolute;
+		display: flexbox;
+		margin: 30px -50px;
+	}
+
+	label[for="repeat password"] {
+		position: absolute;
+		display: flexbox;
+		margin: 30px -120px;
+		
+		}	
+
+	input[type=text], input[type=email], input[type=password], select {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 20px 0;
+			display: inline-block;
+			border: 1px solid #f4f4f4;
+			box-sizing: border-box;
+			
+		}
+		button {
+			background-color: #88a489;
+			color: white;
+			padding: 14px 20px;
+			margin: 8px 0;
+			border: none;
+			cursor: pointer;
+			width: 100%;
+		}
+	form div input{
+		width: 100%;
+		height: 40px;
+		border-radius: 8px;
+		outline: none;
+		padding: 30px;
+		box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+	
+	}
+	form div i{
+		position: absolute;
+		padding: 20px;
+	
+	}
+	.success-icon,
+	.failure-icon{
+			right: 0;
+			opacity: 0;
+	}
+	.failure-icon,
+	.error{
+			color: rgb(194, 194, 194);
+	}
+	.success-icon{
+			color: green;
+	}
+	.error{
+			font-size: 14.5px;
+			margin-top: 5px;
+	}
+	@media (max-width: 900px){
+		.container {
+			flex-direction: column;
+	}}
+	container{
+		display: flex;
+		flex-direction: row;
+	}
+
+
