@@ -1,37 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="registrationApp">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js" integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="registration.js"></script>
-    <link rel="stylesheet" href="registration.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+  <script src="registration.js"></script>
+  <title>Registration</title>
 </head>
-<body>
-    <h2 id="head1">Registration</h2>
-    <div ng-app="registrationFormApp" ng-controller="registrationFormCtrl">
-        <form>
-          <div class="in">
-            <label>Username:</label>
-            <input type="text" ng-model="registrationData.username" required>
-          </div>
-          <div class="in">
-            <label>Password:</label>
-            <input type="password" ng-model="registrationData.password" required>
-          </div>
-          <div class="in">
-            <label>Repeat Password:</label>
-            <input type="password" ng-model="registrationData.repeatPassword" required>
-          </div>
-          <div class="in">
-            <label>Email:</label>
-            <input type="email" ng-model="registrationData.email" required>
-          </div>
-          <button id="btn1" ng-click="submitRegistrationForm()">Submit</button>
-          <button id="btn2" ng-click="cancelRegistrationForm()">Cancel</button>
-        </form>
+<body ng-controller="registrationCtrl">
+  <div class="container">
+    <h2>Registration Form</h2>
+
+    <form name="registrationForm" novalidate>
+      <div class="form-group" ng-class="{'has-error': registrationForm.username.$dirty && registrationForm.username.$invalid}">
+        <label for="username">Username:</label>
+        <input type="text" class="form-control" id="username" name="username" ng-model="user.username" required>
+        <span class="help-block" ng-show="registrationForm.username.$dirty && registrationForm.username.$error.required">Username is required.</span>
       </div>
+
+      <div class="form-group" ng-class="{'has-error': registrationForm.password.$dirty && registrationForm.password.$invalid}">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" id="password" name="password" ng-model="user.password" required>
+        <span class="help-block" ng-show="registrationForm.password.$dirty && registrationForm.password.$error.required">Password is required.</span>
+      </div>
+
+      <div class="form-group"
+        ng-class="{'has-error': registrationForm.repeatPassword.$dirty && (registrationForm.repeatPassword.$error.required || registrationForm.repeatPassword.$error.match)}">
+        <label for="repeatPassword">Repeat Password:</label>
+        <input type="password" class="form-control" id="repeatPassword" name="repeatPassword" ng-model="user.repeatPassword"
+          required ng-pattern="user.password">
+        <span class="help-block" ng-show="registrationForm.repeatPassword.$dirty && registrationForm.repeatPassword.$error.required">Repeat Password is required.</span>
+        <span class="help-block" ng-show="registrationForm.repeatPassword.$dirty && registrationForm.repeatPassword.$error.match">Passwords do not match.</span>
+      </div>
+
+      <div class="form-group" ng-class="{'has-error': registrationForm.email.$dirty && registrationForm.email.$invalid}">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" name="email" ng-model="user.email" required>
+        <span class="help-block" ng-show="registrationForm.email.$dirty && registrationForm.email.$error.required">Email is required.</span>
+        <span class="help-block" ng-show="registrationForm.email.$dirty && registrationForm.email.$error.email">Invalid email format.</span>
+      </div>
+
+      <button type="submit" class="btn btn-default" ng-disabled="registrationForm.$invalid" ng-click="submitForm()">Submit</button>
+      <button type="button" class="btn btn-primary" ng-click="resetForm()">Cancel</button>
+    </form>
+  </div>
 </body>
 </html>
