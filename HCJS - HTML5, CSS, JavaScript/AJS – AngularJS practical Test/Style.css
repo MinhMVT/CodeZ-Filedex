@@ -1,32 +1,62 @@
 	h1{
-		margin: -42%;
+		margin: -43%;
 		display: inline;
+		color: rgb(137, 230, 255);
+		text-shadow:0 3px #5a5a5a;
+	}
+	body{
+		background:url('VekpiA.webp');
+	}
+
+
+	form {
+		box-shadow: 0 0 10px 2px hsl(211, 75%, 50%);
+			border:  3px solid #13aff2;
+			padding: 250px;
+			width: 250px;
+			margin: 0 auto;
+			margin-top: 100px;			
+			height: 400px;
+
+	}
+	input{
+		background-color: #82d2f5;
 		
 	}
+	button {
+		background-color: #6bf0ff;
+		color: rgb(109, 195, 252);
+		padding: 14px 20px;
+		margin: 8px 0;
+		border: none;
+		cursor: pointer;
+		width: 100%;
+	}
 	
-	form {
-			border: 3px solid #f1f0f0;
-			padding: 400px;
-			width: 400px;
-			margin: 0 auto;
-			margin-top: 100px;
-	}	
 	button[type=submit]{
 		display: flexbox;
 		width: fit-content;		
 		margin: -20%;
 		border-radius: 5px;
+		color: #0f81ec;
 	}
 	button[type=cancel]{
 		display: flexbox;
 		width: fit-content;	
-		margin: -86px;	
+		margin: 86px;	
 		border-radius: 5px;
+		color:  rgb(117, 196, 248);
+	
 	}
 	label{
 	position: absolute;
 	display: flexbox;
 	margin: 30px -70px;
+	color:  rgb(42, 148, 219);
+	font-size: 16.5px;
+	text-shadow: 0 2px 0 #592466;
+	
+	
 	
 	}	
 	label[for="email"] {
@@ -47,56 +77,19 @@
 			padding: 12px 20px;
 			margin: 20px 0;
 			display: inline-block;
-			border: 1px solid #f4f4f4;
+			border: 1px solid #ffffff;
 			box-sizing: border-box;
 			
 		}
-		button {
-			background-color: #88a489;
-			color: white;
-			padding: 14px 20px;
-			margin: 8px 0;
-			border: none;
-			cursor: pointer;
-			width: 100%;
-		}
+		
 	form div input{
 		width: 100%;
 		height: 40px;
 		border-radius: 8px;
 		outline: none;
 		padding: 30px;
-		box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+		box-shadow: 2px 2px 4px rgba(88, 87, 87, 0.1);
 	
-	}
-	form div i{
-		position: absolute;
-		padding: 20px;
-	
-	}
-	.success-icon,
-	.failure-icon{
-			right: 0;
-			opacity: 0;
-	}
-	.failure-icon,
-	.error{
-			color: rgb(194, 194, 194);
-	}
-	.success-icon{
-			color: green;
-	}
-	.error{
-			font-size: 14.5px;
-			margin-top: 5px;
-	}
-	@media (max-width: 900px){
-		.container {
-			flex-direction: column;
-	}}
-	container{
-		display: flex;
-		flex-direction: row;
-	}
+	}			
 
 
